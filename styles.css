@@ -3,10 +3,34 @@ body {
     font-family: 'Playfair Display', serif;
     background-color: #fdf6f0; /* soft paper color */
     color: #2c2c2c;
+    font-size: 16px;
+}
+
+#passwordScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #041E42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.password-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* NAVBAR */
 nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: #041E42;
     padding: 15px;
     text-align: center;
@@ -14,9 +38,15 @@ nav {
 
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 8px;
+    font-size: 14px;
     text-decoration: none;
     font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .page-header {
@@ -58,7 +88,7 @@ nav a {
 .header-overlay h1 {
     color: white;
     font-family: 'Great Vibes', cursive;
-    font-size: 3em;
+    font-size: clamp(1.8em, 5vw, 3em);
     text-align: center;
 }
 
@@ -215,7 +245,7 @@ h2 {
 
 .timeline {
     text-align: center;
-    margin: 50px;
+    margin: 20px;
 }
 
 .timeline-line {
@@ -401,12 +431,21 @@ h2 {
         font-size: 2em;
     }
 
+    .timeline-point span {
+        left: 30px !important;
+        right: auto !important;
+        text-align: left;
+        font-size: 12px;
+        width: auto;
+    }
+
     .timeline-point.left span,
     .timeline-point.right span{
         left: 30px;
         text-align: left;
     }
     .polaroid {
-        max-width: 250px;
+        max-width: 85%;
+        margin: 20% auto;
     }
 }

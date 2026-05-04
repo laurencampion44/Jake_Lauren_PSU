@@ -1,6 +1,15 @@
 
 
 let current = 0;
+function checkPassword() {
+    let input = document.getElementById("passwordInput").value;
+
+    if (input === "09032022love") {
+        document.getElementById("passwordScreen").style.display = "none";
+    } else {
+        alert("Wrong password 💔");
+    }
+}
 
 function showSlide(index) {
     document.getElementById("slide").src = images[index];
