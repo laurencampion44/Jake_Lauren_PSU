@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #fdf6f0; /* soft paper color */
+    color: #2c2c2c;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #041E42;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    animation: fadeIn 1s;
+}
+
+/* image */
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 5s ease;
+}
+
+.page-header:hover .header-img {
+    transform: scale(1.05);
+}
+
+/* dark overlay */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(4, 30, 66, 0.5); /* Penn State blue tint */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* title */
+.header-overlay h1 {
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: #041E42;
+}
+
+.relationship-time {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+#timeTogether {
+    font-size: 1.5em;
+    color: #041E42;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* SCRAPBOOK CARDS */
+.event {
+    background: #fff;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+
+    /* scrapbook feel */
+    transform: rotate(-1deg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+}
+
+/* alternate tilt */
+.event:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+/* “tape” effect */
+.event::before {
+    content: "";
+    width: 60px;
+    height: 20px;
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    transform: rotate(-10deg);
+}
+
+/* PHOTOS */
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos img {
+    width: 200px;
+    margin: 15px;
+    border: 8px solid white;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+
+    /* slightly messy scrapbook look */
+    transform: rotate(-2deg);
+}
+
+.photos img:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+/* handwritten text */
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    color: #041E42;
+}
+
+.event {
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.event:hover {
+    transform: scale(1.03) rotate(0deg);
+}
+
+.memory-card {
+    background: #041E42;
+    color: white;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 650px;
+    border-radius: 15px;
+
+    /* scrapbook feel */
+    transform: rotate(-1deg);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+.memory-card h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.slider img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.slider button {
+    background: #041E42;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.accordion-btn {
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+    background: #041E42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.panel {
+    width: 75%;
+    margin: auto;
+    display: none;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.timeline {
+    text-align: center;
+    margin: 50px;
+}
+
+.timeline-line {
+    display: flex;
+    flex-direction: column;   /* 🔥 THIS is the key */
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* vertical line */
+.timeline-line::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #041E42;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* buttons */
+.timeline-point {
+    position: relative;
+    background: white;
+    border: 3px solid #041E42;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 30px 0;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+/* labels */
+.timeline-point span {
+    position: absolute;
+    width: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.timeline-point.left span {
+    right: 50%;
+    transform: translate(-20px, -50%);
+    text-align: right;
+}
+
+.timeline-point.right span {
+    left: 50%;
+    transform: translate(20px, -50%);
+    text-align: left;
+}
+
+.timeline-point:hover {
+    background: #041E42;
+    transform: scale(1.2);
+}
+
+.timeline-point.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background: white;
+    margin: 8% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 420px;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+    animation: fadeIn 0.4s;
+}
+
+.modal-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Polaroid card */
+.polaroid {
+    background: white;
+    padding: 35px 15px 30px 15px;
+    max-width: 300px;
+    margin: 10% auto;
+    text-align: center;
+
+    border-radius: 5px;
+    box-shadow: 8px 8px 25px rgba(0,0,0,0.3);
+    position: relative;
+
+    max-height: 80vh;
+    overflow-y: auto;
+
+    scroll-behavior: smooth;
+}
+
+/* Image */
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Caption (handwritten feel) */
+.caption {
+    margin-top: 10px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.date-badge {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+
+    background: #041E42;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9);
+        }
+    to { opacity: 1; transform: scale(1);
+        }
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .page-header {
+        height: 200px;
+    }
+
+    .header-overlay h1 {
+        font-size: 2em;
+    }
+
+    .timeline-point.left span,
+    .timeline-point.right span{
+        left: 30px;
+        text-align: left;
+    }
+    .polaroid {
+        max-width: 250px;
+    }
+}

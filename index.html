@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="freshman.html">Freshman</a>
+    <a href="sophomore.html">Sophomore</a>
+    <a href="junior.html">Junior</a>
+    <a href="senior.html">Senior</a>
+</nav>
+
+<header class="page-header">
+    <img src="images/Home/IMG_5846.jpeg" class="header-img">
+
+    <div class="header-overlay">
+        <h1>Our Story</h1>
+    </div>
+</header>
+
+<section class="relationship-time">
+    <h2>Timeline</h2>
+    <p id="timeTogether"></p>
+</section>
+
+<section class="timeline">
+
+    <div class="timeline-line">
+
+        <button class="timeline-point left" onclick="openModal('modal1')">
+            <span>8/3/2022</span>
+        </button>
+
+        <button class="timeline-point right" onclick="openModal('modal2')">
+            <span>9/3/2022</span>
+        </button>
+
+        <button class="timeline-point left" onclick="openModal('modal3')">
+            <span>1/14/2023</span>
+        </button>
+
+        <button class="timeline-point right" onclick="openModal('modal4')">
+            <span>2/3/2023</span>
+        </button>
+
+        <button class="timeline-point left" onclick="openModal('modal5')">
+            <span>9/3/2023</span>
+        </button>
+
+    </div>
+
+</section>
+
+<div id="modal1" class="modal">
+    <div class="modal-content polaroid">
+
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="date-badge">Aug 3, 2022</div>
+        <h2>Our First Date</h2>
+
+        <img src="images/Freshman/IMG_7578.jpg" class="modal-img">
+        <p class="caption">
+            I remember when you came and picked me
+        up at my dorm room and we walked downtown hand in hand. We went
+        to the Corner room and both ordered the same exact meal (obviously).
+        We both had mahi mahi tacos and they were delicious!
+        </p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content polaroid">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="date-badge">Sept 3, 2022</div>
+        <h2>When we became official</h2>
+
+        <img src="images/Freshman/IMG_7579.jpg" class="modal-img" width="250">
+        <p class="caption">This was the day you asked me to be your girlfriend.
+        You took me to Allen Street Grill (you spoiled me)! It
+        was so delicious however... this was when I realized that
+        you were alergic to gluten! You took one bite of a piece of
+        bread and felt sick for the last part of dinner😭 Dinner was
+        amazing though and they sat us right by the window!
+        </p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content polaroid">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="date-badge">Jan 14, 2023</div>
+        <h2>Pittsurgh Visit</h2>
+        <img src="images/Freshman/IMG_7579.jpg" class="modal-img" width="250">
+
+        <p></p>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content polaroid">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="date-badge">Mar 2, 2023</div>
+        <h2>First Tadashi Date</h2>
+        <img src="images/Freshman/IMG_7579.jpg" class="modal-img" width="250">
+
+        <p></p>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content polaroid">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <div class="date-badge">Sept 3, 2023</div>
+        <h2>1 Year Anniversary</h2>
+        <img src="images/Freshman/IMG_7579.jpg" class="modal-img" width="250">
+
+        <p></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
