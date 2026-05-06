@@ -221,6 +221,10 @@ h2 {
     justify-content: center;
 }
 
+.memory-card-images img {
+    width: 45%;
+}
+
 .slider {
     display: flex;
     align-items: center;
@@ -265,7 +269,7 @@ h2 {
 
 .timeline {
     text-align: center;
-    margin: 20px;
+    margin: 20px 10px;
 }
 
 .timeline-line {
@@ -306,10 +310,10 @@ h2 {
 /* labels */
 .timeline-point span {
     position: absolute;
-    width: 140px;
+    width: 120px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .timeline-point.left span {
@@ -443,34 +447,42 @@ h2 {
     font-size: 25px;
     cursor: pointer;
 }
-
 @media (max-width: 600px) {
+
     .page-header {
-        height: 200px;
+        height: 40vh;
     }
 
-    .header-overlay h1 {
-        font-size: 2em;
+    nav a {
+        font-size: 13px;
+        margin: 6px;
+    }
+
+    .memory-card,
+    .event {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .slider img {
+        width: 90%;
     }
 
     .timeline-point span {
         left: 30px !important;
-        right: auto !important;
         text-align: left;
         font-size: 12px;
-        width: auto;
     }
 
-    .timeline-point.left span,
-    .timeline-point.right span{
-        left: 30px;
-        text-align: left;
-    }
     .polaroid {
-        max-width: 85%;
-        margin: 20% auto;
+        max-width: 90%;
+        margin: 25% auto;
     }
 
+    .memory-card-images img {
+        width: 100%;   /* 🔥 stack nicely */
+        max-width: 250px;
+    }
 }
 
 .image-viewer {
