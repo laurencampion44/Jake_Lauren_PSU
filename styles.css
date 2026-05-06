@@ -190,12 +190,7 @@ h2 {
     padding: 30px;
     max-width: 650px;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
 
-    /* scrapbook feel */
     transform: none;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
 }
@@ -219,10 +214,16 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 }
 
 .memory-card-images img {
     width: 45%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .slider {
@@ -404,11 +405,11 @@ h2 {
 
 /* Image */
 .polaroid img {
-    width: 50%;
+    width: 100%;
     height: auto;
-    max-height: 120px;
-    object-fit: contain;
-    background: #eee;
+    max-height: none;
+    object-fit: cover;
+    background: none;
 }
 
 /* Caption (handwritten feel) */

@@ -58,18 +58,20 @@ function revealOnScroll() {
 }
 
 function calculateTimeTogether() {
-    let startDate = new Date("2022-09-18T00:00:00"); // 👉 adjust time if needed
+    let element = document.getElementById("timeTogether");
+
+    if (!element) return; // 🔥 THIS LINE FIXES EVERYTHING
+
+    let startDate = new Date("2022-09-18T00:00:00");
     let now = new Date();
 
     let diff = now - startDate;
 
-    // total calculations
     let seconds = Math.floor(diff / 1000);
     let minutes = Math.floor(seconds / 60);
     let hours = Math.floor(minutes / 60);
     let daysTotal = Math.floor(hours / 24);
 
-    // breakdown
     let years = Math.floor(daysTotal / 365);
     let months = Math.floor((daysTotal % 365) / 30);
     let days = (daysTotal % 365) % 30;
@@ -78,7 +80,7 @@ function calculateTimeTogether() {
     let remainingMinutes = minutes % 60;
     let remainingSeconds = seconds % 60;
 
-    document.getElementById("timeTogether").innerText =
+    element.innerText =
         `We’ve been together for 
         ${years}y ${months}m ${days}d 
         ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s 💙`;
