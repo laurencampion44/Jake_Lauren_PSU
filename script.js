@@ -5,6 +5,7 @@ function checkPassword() {
     let input = document.getElementById("passwordInput").value;
 
     if (input === "09032022love") {
+        localStorage.setItem("authenticated", "true"); // 🔥 save login
         document.getElementById("passwordScreen").style.display = "none";
     } else {
         alert("Wrong password 💔");
@@ -12,11 +13,18 @@ function checkPassword() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("authenticated") === "true") {
+        let screen = document.getElementById("passwordScreen");
+        if (screen) screen.style.display = "none";
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     let input = document.getElementById("passwordInput");
 
     input.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-            event.preventDefault(); // prevents weird behavior
+            event.preventDefault();
             checkPassword();
         }
     });
