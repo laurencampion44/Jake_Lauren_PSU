@@ -11,6 +11,17 @@ function checkPassword() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    let input = document.getElementById("passwordInput");
+
+    input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // prevents weird behavior
+            checkPassword();
+        }
+    });
+});
+
 function showSlide(index) {
     document.getElementById("slide").src = images[index];
 }
@@ -72,6 +83,28 @@ function calculateTimeTogether() {
         ${years}y ${months}m ${days}d 
         ${remainingHours}h ${remainingMinutes}m ${remainingSeconds}s 💙`;
 }
+
+function openImage(src) {
+    let viewer = document.getElementById("imageViewer");
+    let img = document.getElementById("viewerImg");
+
+    img.src = src;
+    viewer.style.display = "flex";  // 🔥 THIS centers it
+}
+
+function closeImage() {
+    document.getElementById("imageViewer").style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    let viewer = document.getElementById("imageViewer");
+
+    viewer.addEventListener("click", function (e) {
+        if (e.target === viewer) {
+            closeImage();
+        }
+    });
+});
 
 // 🔥 THIS makes it live
 setInterval(calculateTimeTogether, 1000);

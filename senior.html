@@ -15,16 +15,37 @@
   <a href="senior.html">Senior</a>
 </nav>
 
+<header class="page-header">
+  <img src="images/Senior/IMG_6105.JPG" class="header-img">
+
+<!--  <div class="header-overlay">-->
+<!--    <h1>Our Story</h1>-->
+<!--  </div>-->
+</header>
+
 <section class="timeline">
   <h2>Senior Year 💙</h2>
 
   <div class="event">
-    <h3>How It All Started</h3>
-    <p>Write your story here.</p>
+    <h3>Senior Year Memories</h3>
+    <p>This school year was full of memories. Even though we only had
+    1 semester together, it was probably my favorite one. We did everything
+    ever and made it so amazing. From football games, to our 3 years,
+    to Taryn's wedding, to you visiting me in Austin, there were so many
+    awesome memories created. </p>
   </div>
 
   <div class="memory-card">
-    <h3>A Moment I’ll Never Forget 💙</h3>
+    <h3>St. John 🏝️</h3>
+    <div class="memory-card-images">
+      <img src="images/Senior/IMG_0661.JPG" class="clickable" onclick="openImage(this.src)">
+      <img src="images/Senior/IMG_2529.JPEG" class="clickable" onclick="openImage(this.src)">
+      <img src="images/Senior/IMG_0649.JPG" class="clickable" onclick="openImage(this.src)">
+      <img src="images/Senior/IMG_6045.JPG" class="clickable" onclick="openImage(this.src)">
+      <img src="images/Senior/IMG_5979.JPG" class="clickable" onclick="openImage(this.src)">
+      <img src="images/Senior/IMG_5778.JPG" class="clickable" onclick="openImage(this.src)">
+      <img src="images/Senior/IMG_5933.jpeg" class="clickable" onclick="openImage(this.src)">
+    </div>
     <p>
       Write a deeper, more emotional memory here. Something meaningful,
       like a trip, a hard time you got through together, or a moment
@@ -146,6 +167,11 @@
     "images/Senior/P1020628.JPG"
   ];
 </script>
+
+<div id="imageViewer" class="image-viewer">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img id="viewerImg">
+</div>
 
 <script src="script.js"></script>
 
